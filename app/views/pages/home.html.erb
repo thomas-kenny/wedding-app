@@ -1,2 +1,4 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1><%= @wedding.name %></h1>
+<p>Are getting married</p>
+<p><%= link_to 'RSVP', wedding_path(@wedding)  %></p>
+

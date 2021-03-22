@@ -1,0 +1,5 @@
+<% @rsvps.each do |rsvp| %>
+<% if rsvp.attending == true %>
+  <p><%= rsvp.name %></p>
+  <% end %>
+<% end %>

@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>RSVP</h1>
+  <div class="form">
+    <%= simple_form_for([@wedding, @rsvp]) do |f| %>
+    <%= f.input :name %>
+    <div class="form-check form-check-inline">
+      <%= f.radio_button :attending, 'true', checked: true, id: 'guest_attending_true', class: 'form-check-input' %>
+      <%= f.label :attending, "Yes, I'll join you!", value: 'true', class: 'form-check-label' %>
+    </div>
+    <br>
+    <div class="form-check form-check-inline">
+      <%= f.radio_button :attending, 'false', id: 'guest_attending_false', class: 'form-check-input' %>
+      <%= f.label :attending, "Sorry, I can't make it", value: 'false', class: 'form-check-label' %>
+    </div>
+    <%= f.input :dietary_requirements, label: "Any dietary requirements?" %>
+    <%= f.submit "RSVP", class: "btn-sm btn-outline-primary " %>
+    <% end %>
+  </div>
+</div>
