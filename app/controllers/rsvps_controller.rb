@@ -1,4 +1,5 @@
 class RsvpsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create, :show]
   def create
     @wedding = Wedding.first
     @rsvp = Rsvp.new(rsvp_params)
@@ -24,5 +25,4 @@ class RsvpsController < ApplicationController
   def rsvp_params
     params.require(:rsvp).permit(:name, :attending)
   end
-
 end
