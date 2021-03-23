@@ -9,60 +9,12 @@
   <p>blah blah blah</p>
 
 
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-  RSVP
-</button>
+<%= render 'shared/modal' %>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">RSVP</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form">
-          <%= simple_form_for([@wedding, @rsvp]) do |f| %>
-          <%= f.input :name %>
-          <div class="form-check form-check-inline">
-            <%= f.radio_button :attending, 'true', checked: true, id: 'guest_attending_true', class: 'form-check-input' %>
-            <%= f.label :attending, "Yes, I'll join you!", value: 'true', class: 'form-check-label' %>
-          </div>
-          <br>
-          <div class="form-check form-check-inline">
-            <%= f.radio_button :attending, 'false', id: 'guest_attending_false', class: 'form-check-input' %>
-            <%= f.label :attending, "Sorry, I can't make it", value: 'false', class: 'form-check-label' %>
-          </div>
-          <%= f.input :dietary_requirements, label: "Any dietary requirements?" %>
-          <%= f.submit "RSVP", class: "btn-sm btn-outline-primary " %>
-          <% end %>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+
 </div>
-
-
-
- <!--  <div class="form">
-    <%= simple_form_for([@wedding, @rsvp]) do |f| %>
-    <%= f.input :name %>
-    <div class="form-check form-check-inline">
-      <%= f.radio_button :attending, 'true', checked: true, id: 'guest_attending_true', class: 'form-check-input' %>
-      <%= f.label :attending, "Yes, I'll join you!", value: 'true', class: 'form-check-label' %>
-    </div>
-    <br>
-    <div class="form-check form-check-inline">
-      <%= f.radio_button :attending, 'false', id: 'guest_attending_false', class: 'form-check-input' %>
-      <%= f.label :attending, "Sorry, I can't make it", value: 'false', class: 'form-check-label' %>
-    </div>
-    <%= f.input :dietary_requirements, label: "Any dietary requirements?" %>
-    <%= f.submit "RSVP", class: "btn-sm btn-outline-primary " %>
-    <% end %>
-  </div>
-</div> -->
