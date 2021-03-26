@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     resources :rsvps, only: [:create]
   end
   resources :rsvps, only: [:show, :index]
+  get 'pages/gifts', to: 'pages#gifts'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

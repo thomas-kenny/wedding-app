@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
+import ConfettiGenerator from "confetti-js";
 
 
 
@@ -37,3 +38,7 @@ document.addEventListener('turbolinks:load', () => {
 })
   // Call your functions here, e.g:
   // initSelect2();
+const confettiElement = document.getElementById('my-canvas');
+const confettiSettings = { target: confettiElement };
+const confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();

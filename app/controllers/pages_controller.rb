@@ -4,4 +4,7 @@ class PagesController < ApplicationController
     @wedding = Wedding.first
   end
 
+  def gifts
+  end
+
 end
