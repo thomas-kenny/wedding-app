@@ -1,4 +1,24 @@
-<h1><%= @wedding.name %></h1>
-<p>Are getting married</p>
-<p><%= link_to 'RSVP', wedding_path(@wedding)  %></p>
+<div class="container">
+  <div class="home-elements">
+
+    <div class="home-text">
+      <div class="header">
+        <h3>Join us to celebrate our marriage!</h3>
+      </div>
+      <div class="names">
+        <h1>Tom and Ruby</h1>
+        <h3>Saturday 17th July 2021</h3>
+      </div>
+      <div class="button">
+        <h5>Please RSVP by 31st May</h5>
+        <br>
+        <p><%= link_to 'RSVP', wedding_path(@wedding), class: "btn-primary" %></p>
+      </div>
+    </div>
+
+    <div class="home-image">
+      <img src="https://source.unsplash.com/random" alt="">
+    </div>
+  </div>
+</div>
 
