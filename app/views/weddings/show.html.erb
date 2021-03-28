@@ -1,14 +1,24 @@
-<div class="container d-flex">
-  <div>
-  <h1>INFO PAGE</h1>
-  <%= render 'shared/modal' %>
-  </div>
+<div class="container">
+  <div class="info-elements">
+    <div id="map"
+     style="width: 500px; height: 500px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     </div>
 
-  <div id="map"
-   style="width: 400px; height: 400px;"
-   data-markers="<%= @markers.to_json %>"
-   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="address">
+      <h1>Saturday 17th July 2021</h1>
+      <br>
+      <h3>Bells Forstal Farm</h3>
+      <h3>Throwley</h3>
+      <h3>Faversham</h3>
+      <h3>Kent</h3>
+      <h3>ME13 0JS</h3>
+      <br>
+      <%= render 'shared/modal' %>
+    </div>
+
    </div>
-
-
 </div>
+
+

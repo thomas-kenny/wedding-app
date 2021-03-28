@@ -1,0 +1,24 @@
+.info-elements {
+  width: 960px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  #map {
+    padding: 10px;
+    margin-top: 50px;
+  }
+}
+
+section > canvas {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+}
+
+section > * {
+    z-index: 9;
+    position: relative;
+    top: 0;
+  }
