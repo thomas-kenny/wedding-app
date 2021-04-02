@@ -1,12 +1,16 @@
 <div class="container">
-  <div class="info-elements">
-    <div id="map"
+  <div class="header">
+    <h1>Wedding Info</h1>
+  </div>
+  <div class="info-elements row">
+
+    <div class="col-12 col-lg-6" id="map"
      style="width: 500px; height: 500px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
      </div>
 
-    <div class="address">
+    <div class="address col-12 col-lg-6">
       <h1>Saturday 17th July 2021</h1>
       <br>
       <h3>Bells Forstal Farm</h3>

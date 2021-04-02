@@ -59,6 +59,7 @@ group :test do
 end
 
 gem 'geocoder'
+gem 'bootstrap', '~> 5.0.0.beta2'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

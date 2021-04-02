@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   end
   resources :rsvps, only: [:show, :index]
   get 'pages/gifts', to: 'pages#gifts'
+  get 'pages/travel', to: 'pages#travel'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

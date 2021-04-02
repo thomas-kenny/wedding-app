@@ -6,8 +6,11 @@
   justify-content: space-between;
   margin: auto;
   #map {
-    padding: 10px;
-    margin-top: 50px;
+    padding: 50px;
+    margin-top: 20px;
+  }
+  .address {
+    padding: 50px;
   }
 }
 
@@ -21,4 +24,9 @@ section > * {
     z-index: 9;
     position: relative;
     top: 0;
+  }
+
+  .header {
+    margin-top: 20px;
+    text-align: center;
   }
