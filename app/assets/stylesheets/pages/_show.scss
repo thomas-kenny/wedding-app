@@ -7,15 +7,45 @@
   margin: auto;
   img {
     // padding: 20px;
-    width: 600px;
-    margin-top: 40px;
+    width: 570px;
+    margin-top: 30px;
     position: relative;
-    right: 160px;
+    right: 130px;
+    margin-bottom: 50px;
   }
   .address {
     padding: 20px;
   }
 }
+
+.travel-elements {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .travel-info {
+    position: relative;
+    left: 40px;
+  }
+}
+
+.gifts-elements {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  .gifts-info {
+    position: relative;
+    // left: 40px;
+    top: 30px;
+  }
+  img {
+    width: 85%;
+    position: relative;
+    left: 30px;
+  }
+}
+
+
 
 section > canvas {
     z-index: 0;
@@ -30,6 +60,7 @@ section > * {
   }
 
   .header {
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     text-align: center;
   }

@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home, :gifts, :travel ]
   def home
     @wedding = Wedding.first
+    @rsvp = Rsvp.new
   end
 
   def gifts
