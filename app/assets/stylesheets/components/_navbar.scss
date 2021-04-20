@@ -11,10 +11,14 @@
 .navbar-light .navbar-brand {
   color: #ff5757;
   font-size: 15px;
-  .hover {
-    color: #ff5757;
-  }
+  opacity: 0.7
 }
+
+.navbar-light .navbar-brand:hover {
+    color: #ff5757;
+    opacity: 1;
+  }
+
 
 .dropdown-toggle {
   margin-right: 30px;

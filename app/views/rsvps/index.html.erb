@@ -1,7 +1,20 @@
-<% @rsvps.each do |rsvp| %>
-<% if rsvp.attending == true %>
-  <p><%= rsvp.name %></p>
-  <% end %>
-<% end %>
+<div class="container">
+  <div class="attending">
+    <h1>Attending</h1>
+    <% @rsvps.each do |rsvp| %>
+      <% if rsvp.attending == true %>
+        <p><%= rsvp.name %> <%= rsvp.emails %> <%= rsvp.dietary_requirements %> <%= rsvp.songs %></p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="not-attending">
+    <h1>Not attending</h1>
+    <% @rsvps.each do |rsvp| %>
+      <% if rsvp.attending == false %>
+        <p><%= rsvp.name %> <%= rsvp.emails %></p>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
