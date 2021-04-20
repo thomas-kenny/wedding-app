@@ -3,7 +3,7 @@
     <h1>Attending</h1>
     <% @rsvps.each do |rsvp| %>
       <% if rsvp.attending == true %>
-        <p><%= rsvp.name %> <%= rsvp.emails %> <%= rsvp.dietary_requirements %> <%= rsvp.songs %></p>
+        <p><%= rsvp.name %> <%= rsvp.email %> <%= rsvp.dietary_requirements %> <%= rsvp.songs %></p>
       <% end %>
     <% end %>
   </div>
@@ -11,7 +11,7 @@
     <h1>Not attending</h1>
     <% @rsvps.each do |rsvp| %>
       <% if rsvp.attending == false %>
-        <p><%= rsvp.name %> <%= rsvp.emails %></p>
+        <p><%= rsvp.name %> <%= rsvp.email %></p>
       <% end %>
     <% end %>
   </div>
