@@ -1,12 +1,12 @@
 <section>
   <div class="content" style="padding:25% 0;text-align: center;">
-    <h1 style="font-size: 4em;text-transform: uppercase;letter-spacing: -.05em;">Thanks for letting us know!</h1>
+    <h1 style="font-size: 3em;">Thanks for letting us know!</h1>
     <% if @rsvp.attending == true %>
-        <p style="font-size: 1.5em;text-transform: uppercase;">We can't wait to celebrate with you!<h1>
+        <p style="font-size: 2em;">We can't wait to celebrate with you!<h1>
     <% else %>
-      <p style="font-size: 1.5em;text-transform: uppercase;">We are sorry you can't join us</p>
+      <p style="font-size: 2em;;">We are sorry you can't join us</p>
     <% end %>
-    <%= link_to "Back", root_path, class: "btn-primary" %>
+    <%= link_to "Wedding info", wedding_path(Wedding.find(16)), class: "btn btn-outline-primary" %>
   </div>
   <canvas id="my-canvas" width="1138" height="1009">
 </section>
