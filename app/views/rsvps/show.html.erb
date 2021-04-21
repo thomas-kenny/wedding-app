@@ -6,7 +6,7 @@
     <% else %>
       <p style="font-size: 2em;;">We are sorry you can't join us</p>
     <% end %>
-    <%= link_to "Wedding info", wedding_path(Wedding.find(16)), class: "btn btn-outline-primary" %>
+    <%= link_to "Wedding info", wedding_path(Wedding.first), class: "btn btn-outline-primary" %>
   </div>
   <canvas id="my-canvas" width="1138" height="1009">
 </section>
