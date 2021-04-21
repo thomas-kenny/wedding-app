@@ -4,7 +4,7 @@
   </div>
   <div class="info-elements row justify-content-center">
 
-    <div class="wedding-image col-12 col-lg-6">
+    <div class="wedding-image col-sm-12 col-lg-6">
       <%= image_tag "garden.jpg", alt: "alttext" %>
     </div>
 
@@ -23,25 +23,24 @@
 
 
    <div class="travel-elements row">
-    <div class="travel-info col-12 col-lg-6">
-      <h3><center>Travel</center></h3>
-      <br>
-      <h6><strong>Throwley is a 10-15 minute taxi ride from Faversham or Charing train stations</strong></h6>
-      <br>
+    <div class="travel-info col-sm-12 col-lg-6">
       <h5><strong>Trains</strong></h5>
       <h6>London St Pancras to Faversham around 1 hour / to Charing (via Ashford) 50 minutes.</h6>
       <h6>London Victoria to Faversham 1 hour 15 mins / to Charing around 1 hour 30 minutes.</h6>
       <br>
+      <br>
       <h5><strong>Taxis must be booked in advance</strong></h5>
+      <h6>Throwley is a 10-15 minute taxi ride from Faversham or Charing train stations</h6>
       <h6>Starlite Taxis: 01795 591066</h6>
       <h6>Reeves Taxis: 01795 536666</h6>
+      <br>
       <br>
       <h5><strong>Return coach to London</strong></h5>
       <h6>We are organising a coach from the wedding to London at the end of the evening.</h6>
       <h6> Please contact us as soon as possible if you are interested at <a href="mailto:tkandruby@gmail.com">tkandruby@gmail.com</a></h6>
     </div>
 
-    <div class="col-12 col-lg-6" id="map"
+    <div class="col-sm-12 col-lg-6" id="map"
      style="width: 500px; height: 500px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -50,16 +49,20 @@
 
   <div class="gifts-elements row">
 
-    <div class="gift-image col-12 col-lg-6">
+    <div class="gift-image col-sm-12 col-lg-6">
       <%= image_tag "nancy_bruno.jpg", alt: "alttext" %>
     </div>
 
     <div class="gifts-info col-sm-12 col-lg-6">
-      <h3><center>Gifts</center></h3>
+      <h5><strong>Accommodation</strong></h5>
+      <h6>If you are planning to stay the night, we would suggest looking at Faversham, Whitstable and Margate for hotels and Airbnb's.</h6>
+      <h6>While we are optimistic that we will be able to celebrate with you all by July, please check that any bookings are refundable.</h6>
       <br>
-      <h5>Your presence at our wedding is enough of a gift!</h5>
       <br>
+      <h5><strong>Gifts</strong></h3>
+      <h6>Your presence at our wedding is enough of a gift!</h6>
       <h6>However, if you would still like to give a gift, we would be grateful for any contributions to our honeymoon fund. We will be going to Italy in 2022!</h6>
+      <br>
       <br>
       <div class="contact">
         <p>If you have any questions at all, please don't hesitate to get in touch with us at <a href="mailto:tkandruby@gmail.com">tkandruby@gmail.com</a></p>
